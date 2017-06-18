@@ -51,7 +51,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I8U-93-3DX">
                                 <rect key="frame" x="107" y="123" width="160" height="160"/>
                             </imageView>
-                            <navigationBar opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2L-zs-C7z">
+                            <navigationBar opaque="NO" contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="b2L-zs-C7z">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Polter" id="nwz-jo-pc3"/>
@@ -121,7 +121,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n5l-67-boO">
+                            <navigationBar contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="n5l-67-boO">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Registro" id="KwR-Cx-NVF">
@@ -198,61 +198,61 @@
             </objects>
             <point key="canvasLocation" x="517.60000000000002" y="133.5832083958021"/>
         </scene>
-        <!--Random-->
-        <scene sceneID="Cx6-gh-0Ha">
-            <objects>
-                <viewController id="gCy-ah-IJv" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="O2D-wo-WAO"/>
-                        <viewControllerLayoutGuide type="bottom" id="63c-Uq-KVi"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uWS-QE-oW9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P5W-xX-fPN">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Polter" id="Oqe-Ee-bGK"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" red="0.28507529149999999" green="0.28507529149999999" blue="0.28507529149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Random" image="random" id="dh3-rB-cqa"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="df7-UZ-obw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="433" y="1612"/>
-        </scene>
         <!--Grabar-->
-        <scene sceneID="dCR-fq-pE6">
+        <scene sceneID="Cyd-ka-jVK">
             <objects>
-                <viewController id="gbT-HD-8ir" sceneMemberID="viewController">
+                <viewController id="VGg-ZO-yjE" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wjV-QI-t4y"/>
-                        <viewControllerLayoutGuide type="bottom" id="0pO-qB-Wo3"/>
+                        <viewControllerLayoutGuide type="top" id="asM-H6-kBN"/>
+                        <viewControllerLayoutGuide type="bottom" id="NuO-G6-UPz"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="NrG-z8-inJ">
+                    <view key="view" contentMode="scaleToFill" id="E5r-wx-NDg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jLc-BK-HXS">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="ZTc-QC-iSo">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Polter" id="d8W-Ye-nVb"/>
+                                    <navigationItem title="Polter" id="EMg-I1-wc9"/>
                                 </items>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.28507529149999999" green="0.28507529149999999" blue="0.28507529149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" enabled="NO" title="Grabar" image="record" id="zOf-gg-ahd"/>
+                    <tabBarItem key="tabBarItem" title="Grabar" image="record" id="vSK-qW-DcY"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VkA-mK-uW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lI0-7c-5ES" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-274" y="1612"/>
+        </scene>
+        <!--Random-->
+        <scene sceneID="rzh-NS-lZd">
+            <objects>
+                <viewController id="yGf-Lk-zot" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cu6-Me-eRP"/>
+                        <viewControllerLayoutGuide type="bottom" id="XVQ-sW-yUh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QTT-sv-hxB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="ZJM-oO-keU">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Polter" id="NIh-f9-V8M"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.28507529149999999" green="0.28507529149999999" blue="0.28507529149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Random" image="random" id="alZ-5c-SEv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L46-CR-Jk1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="460" y="1612"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dLM-jH-lPf">
@@ -267,8 +267,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="gbT-HD-8ir" kind="relationship" relationship="viewControllers" id="FJG-ND-1jt"/>
-                        <segue destination="gCy-ah-IJv" kind="relationship" relationship="viewControllers" id="AgT-1b-Ca9"/>
+                        <segue destination="VGg-ZO-yjE" kind="relationship" relationship="viewControllers" id="xTT-T2-18K"/>
+                        <segue destination="yGf-Lk-zot" kind="relationship" relationship="viewControllers" id="IVk-nf-U7A"/>
                     </connections>
                 </tabBarController>
             </objects>
