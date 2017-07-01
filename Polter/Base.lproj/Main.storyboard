@@ -45,7 +45,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
-                                    <segue destination="aaW-8d-9vg" kind="show" identifier="registerView" id="vyf-wH-7Fe"/>
+                                    <segue destination="aaW-8d-9vg" kind="modal" id="axG-1H-2tK"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I8U-93-3DX">
@@ -107,7 +107,6 @@
                     <connections>
                         <outlet property="loginButton" destination="Vqi-hx-YHz" id="4eD-6M-ni7"/>
                         <outlet property="passwordTextField" destination="STL-QC-yZL" id="Rfw-Vu-zsA"/>
-                        <outlet property="registerButton" destination="WLF-3E-zZm" id="9U0-M4-a47"/>
                         <outlet property="usernameTextField" destination="9Qb-pS-MyM" id="fHu-7N-W6c"/>
                     </connections>
                 </viewController>
@@ -115,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="-274.39999999999998" y="134.48275862068968"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="Vdf-KN-bZ2">
             <objects>
-                <viewController id="aaW-8d-9vg" sceneMemberID="viewController">
+                <viewController id="aaW-8d-9vg" customClass="RegisterViewController" customModule="Polter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gR3-ln-1oE"/>
                         <viewControllerLayoutGuide type="bottom" id="JN5-gt-ULf"/>
@@ -131,8 +130,16 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Register" id="KwR-Cx-NVF">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="EXy-lb-PhV"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="VO3-kS-kPd"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="EXy-lb-PhV">
+                                            <connections>
+                                                <action selector="cancelButtonAction:" destination="aaW-8d-9vg" id="vVr-eZ-PfC"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="VO3-kS-kPd">
+                                            <connections>
+                                                <action selector="doneButtonAction:" destination="aaW-8d-9vg" id="pE9-Ym-flv"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -154,9 +161,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Repeat password:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXX-dV-p2o">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat password:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXX-dV-p2o">
                                 <rect key="frame" x="16" y="293" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -179,9 +185,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-enter your password here." textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="OTd-rO-jFy">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-enter your password here." textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="OTd-rO-jFy">
                                 <rect key="frame" x="16" y="322" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -189,9 +194,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.28507529149999999" green="0.28507529149999999" blue="0.28507529149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="vXX-dV-p2o" firstAttribute="leading" secondItem="X47-to-3PF" secondAttribute="leadingMargin" id="0wZ-od-WVt"/>
                             <constraint firstItem="n5l-67-boO" firstAttribute="leading" secondItem="X47-to-3PF" secondAttribute="leading" id="4Sm-7I-3Xi"/>
                             <constraint firstItem="qiE-Uq-YnM" firstAttribute="top" secondItem="n5l-67-boO" secondAttribute="bottom" constant="20" id="5KN-n3-4vZ"/>
+                            <constraint firstItem="OTd-rO-jFy" firstAttribute="trailing" secondItem="X47-to-3PF" secondAttribute="trailingMargin" id="5Tk-hr-nUC"/>
                             <constraint firstItem="ETm-DG-obr" firstAttribute="top" secondItem="urc-y2-N9B" secondAttribute="bottom" constant="8" symbolic="YES" id="5V7-Ka-fRZ"/>
+                            <constraint firstItem="vXX-dV-p2o" firstAttribute="top" secondItem="3IZ-lP-hIf" secondAttribute="bottom" constant="8" id="74D-aR-lYg"/>
                             <constraint firstItem="ETm-DG-obr" firstAttribute="leading" secondItem="jWc-0n-phK" secondAttribute="leading" id="BOM-fi-QTh"/>
                             <constraint firstItem="ETm-DG-obr" firstAttribute="trailing" secondItem="jWc-0n-phK" secondAttribute="trailing" id="Bzy-n1-eRL"/>
                             <constraint firstItem="urc-y2-N9B" firstAttribute="trailing" secondItem="ETm-DG-obr" secondAttribute="trailing" id="Ck9-14-Z3F"/>
@@ -200,7 +208,10 @@
                             <constraint firstItem="jWc-0n-phK" firstAttribute="leading" secondItem="fdr-7S-CAE" secondAttribute="leading" id="FE6-VE-6Nl"/>
                             <constraint firstItem="fdr-7S-CAE" firstAttribute="trailing" secondItem="3IZ-lP-hIf" secondAttribute="trailing" id="Ox5-KY-kiL"/>
                             <constraint firstItem="fdr-7S-CAE" firstAttribute="top" secondItem="jWc-0n-phK" secondAttribute="bottom" constant="8" symbolic="YES" id="P2I-lm-BDf"/>
+                            <constraint firstItem="OTd-rO-jFy" firstAttribute="top" secondItem="vXX-dV-p2o" secondAttribute="bottom" constant="8" id="Q1H-0R-JR0"/>
+                            <constraint firstItem="OTd-rO-jFy" firstAttribute="leading" secondItem="X47-to-3PF" secondAttribute="leadingMargin" id="Q1M-py-4mW"/>
                             <constraint firstItem="urc-y2-N9B" firstAttribute="leading" secondItem="ETm-DG-obr" secondAttribute="leading" id="Urp-5U-35R"/>
+                            <constraint firstItem="vXX-dV-p2o" firstAttribute="trailing" secondItem="X47-to-3PF" secondAttribute="trailingMargin" id="XtT-Ux-DdH"/>
                             <constraint firstItem="n5l-67-boO" firstAttribute="top" secondItem="gR3-ln-1oE" secondAttribute="bottom" constant="8" id="ZXa-UT-WX0"/>
                             <constraint firstAttribute="trailing" secondItem="n5l-67-boO" secondAttribute="trailing" id="ady-gK-g5t"/>
                             <constraint firstItem="3IZ-lP-hIf" firstAttribute="top" secondItem="fdr-7S-CAE" secondAttribute="bottom" constant="8" symbolic="YES" id="cVb-0W-KC8"/>
@@ -213,12 +224,18 @@
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="jWc-0n-phK" id="IMC-ou-jej"/>
+                        <outlet property="passwordTextField" destination="3IZ-lP-hIf" id="G6C-Sy-xIQ"/>
+                        <outlet property="repasswordTextField" destination="OTd-rO-jFy" id="vYc-Oi-M1F"/>
+                        <outlet property="userTextField" destination="urc-y2-N9B" id="fom-9t-Qy9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HL3-vu-774" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="517.60000000000002" y="133.5832083958021"/>
         </scene>
-        <!--Grabar-->
+        <!--View Controller-->
         <scene sceneID="Cyd-ka-jVK">
             <objects>
                 <viewController id="VGg-ZO-yjE" sceneMemberID="viewController">
@@ -237,16 +254,26 @@
                                     <navigationItem title="Polter" id="EMg-I1-wc9"/>
                                 </items>
                             </navigationBar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="XN0-Wf-qfo">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Record" id="ZdD-Me-IZ5">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" id="hwz-iI-JEC"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="fPL-Nd-4fJ"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.28507529149999999" green="0.28507529149999999" blue="0.28507529149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Grabar" image="record" id="vSK-qW-DcY"/>
+                    <navigationItem key="navigationItem" id="ppN-qa-jz2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lI0-7c-5ES" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-274" y="1612"/>
+            <point key="canvasLocation" x="-274" y="2318"/>
         </scene>
-        <!--Random-->
+        <!--View Controller-->
         <scene sceneID="rzh-NS-lZd">
             <objects>
                 <viewController extendedLayoutIncludesOpaqueBars="YES" id="yGf-Lk-zot" sceneMemberID="viewController">
@@ -268,14 +295,24 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="h57-cf-ndu">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Random" id="TV1-rB-YtX">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" id="2QJ-zy-Gd9"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Profile" id="N1D-y6-p0C"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.28507529149999999" green="0.28507529149999999" blue="0.28507529149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Random" image="random" id="alZ-5c-SEv"/>
+                    <navigationItem key="navigationItem" id="h6l-c0-dUQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L46-CR-Jk1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="460" y="1612"/>
+            <point key="canvasLocation" x="518" y="2318"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dLM-jH-lPf">
@@ -287,15 +324,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="VGg-ZO-yjE" kind="relationship" relationship="viewControllers" id="xTT-T2-18K"/>
-                        <segue destination="yGf-Lk-zot" kind="relationship" relationship="viewControllers" id="IVk-nf-U7A"/>
+                        <segue destination="7kO-XR-UwQ" kind="relationship" relationship="viewControllers" id="xTT-T2-18K"/>
+                        <segue destination="MFX-Gj-eKw" kind="relationship" relationship="viewControllers" id="IVk-nf-U7A"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JxS-bC-Pid" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-274" y="842"/>
+        </scene>
+        <!--Record-->
+        <scene sceneID="J9K-Aw-A27">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7kO-XR-UwQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Record" image="record" id="vSK-qW-DcY"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wA2-lE-rXP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VGg-ZO-yjE" kind="relationship" relationship="rootViewController" id="Vwd-0s-hS3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="THH-1I-IQV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-274.39999999999998" y="1611.5442278860571"/>
+        </scene>
+        <!--Random-->
+        <scene sceneID="4SI-EF-86X">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MFX-Gj-eKw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Random" image="random" id="alZ-5c-SEv"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MhV-rB-x9f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yGf-Lk-zot" kind="relationship" relationship="rootViewController" id="Fij-xh-jbS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mrs-f2-Nrx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="517.60000000000002" y="1611.5442278860571"/>
         </scene>
     </scenes>
     <resources>

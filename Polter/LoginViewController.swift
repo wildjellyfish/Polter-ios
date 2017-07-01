@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+		
 import UIKit
 
 class LoginViewController: UIViewController {
@@ -29,7 +29,6 @@ class LoginViewController: UIViewController {
             displayAlertMessage(userMessage: "All fields are required")
             return
         }
-
     }
     
     func displayAlertMessage(userMessage: String){
@@ -42,5 +41,4 @@ class LoginViewController: UIViewController {
         
         self.present(myAlert, animated:true, completion:nil);
     }
-
 }
