@@ -54,7 +54,8 @@ class RegisterViewController: UIViewController {
         {
             displayAlertMessage(userMessage: "Passwords do not match")
             return
-        }
+        }        
+        
         let myAlert = UIAlertController(title:"Alert", message: "Registration is succesfull", preferredStyle: UIAlertControllerStyle.alert);
         let okAction = UIAlertAction(title:"Ok", style:UIAlertActionStyle.default){ action in
             self.dismiss(animated: true,completion: nil)

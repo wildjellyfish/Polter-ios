@@ -7,23 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE5E04F11F099C6A009F9F5A /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5E04F01F099C6A009F9F5A /* RecordViewController.swift */; };
+		AE5E04F31F099CC3009F9F5A /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5E04F21F099CC3009F9F5A /* RandomViewController.swift */; };
+		AE5E04F51F099F07009F9F5A /* TopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5E04F41F099F07009F9F5A /* TopsViewController.swift */; };
+		AE5E04F71F099FE5009F9F5A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5E04F61F099FE5009F9F5A /* ProfileViewController.swift */; };
 		AEB034C51EE9B40C00EBF876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB034C41EE9B40C00EBF876 /* AppDelegate.swift */; };
 		AEB034CA1EE9B40C00EBF876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEB034C81EE9B40C00EBF876 /* Main.storyboard */; };
 		AEB034CC1EE9B40C00EBF876 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEB034CB1EE9B40C00EBF876 /* Assets.xcassets */; };
 		AEB034CF1EE9B40C00EBF876 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEB034CD1EE9B40C00EBF876 /* LaunchScreen.storyboard */; };
+		AED0687F1F0AA23E00E2E2BA /* MyFavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED0687E1F0AA23E00E2E2BA /* MyFavoritesViewController.swift */; };
+		AED068831F0AA38B00E2E2BA /* MyListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED068821F0AA38B00E2E2BA /* MyListsViewController.swift */; };
 		AEEEDF931EFC2498002B4F46 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEEDF921EFC2497002B4F46 /* LoginViewController.swift */; };
 		AEFDB7271F0834BD00F31A28 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFDB7261F0834BD00F31A28 /* RegisterViewController.swift */; };
+		AEFDB7291F08580000F31A28 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFDB7281F08580000F31A28 /* DashboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE5E04F01F099C6A009F9F5A /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		AE5E04F21F099CC3009F9F5A /* RandomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
+		AE5E04F41F099F07009F9F5A /* TopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopsViewController.swift; sourceTree = "<group>"; };
+		AE5E04F61F099FE5009F9F5A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AEB034C11EE9B40B00EBF876 /* Polter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB034C41EE9B40C00EBF876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEB034C91EE9B40C00EBF876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AEB034CB1EE9B40C00EBF876 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEB034CE1EE9B40C00EBF876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEB034D01EE9B40C00EBF876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AED0687E1F0AA23E00E2E2BA /* MyFavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFavoritesViewController.swift; sourceTree = "<group>"; };
+		AED068821F0AA38B00E2E2BA /* MyListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyListsViewController.swift; sourceTree = "<group>"; };
 		AEEEDF921EFC2497002B4F46 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AEFDB7261F0834BD00F31A28 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		AEFDB7281F08580000F31A28 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +102,13 @@
 				AEB034C81EE9B40C00EBF876 /* Main.storyboard */,
 				AEEEDF921EFC2497002B4F46 /* LoginViewController.swift */,
 				AEFDB7261F0834BD00F31A28 /* RegisterViewController.swift */,
+				AEFDB7281F08580000F31A28 /* DashboardViewController.swift */,
+				AE5E04F01F099C6A009F9F5A /* RecordViewController.swift */,
+				AE5E04F21F099CC3009F9F5A /* RandomViewController.swift */,
+				AE5E04F41F099F07009F9F5A /* TopsViewController.swift */,
+				AE5E04F61F099FE5009F9F5A /* ProfileViewController.swift */,
+				AED0687E1F0AA23E00E2E2BA /* MyFavoritesViewController.swift */,
+				AED068821F0AA38B00E2E2BA /* MyListsViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -174,7 +195,14 @@
 			files = (
 				AEEEDF931EFC2498002B4F46 /* LoginViewController.swift in Sources */,
 				AEB034C51EE9B40C00EBF876 /* AppDelegate.swift in Sources */,
+				AE5E04F11F099C6A009F9F5A /* RecordViewController.swift in Sources */,
+				AE5E04F31F099CC3009F9F5A /* RandomViewController.swift in Sources */,
 				AEFDB7271F0834BD00F31A28 /* RegisterViewController.swift in Sources */,
+				AED0687F1F0AA23E00E2E2BA /* MyFavoritesViewController.swift in Sources */,
+				AEFDB7291F08580000F31A28 /* DashboardViewController.swift in Sources */,
+				AED068831F0AA38B00E2E2BA /* MyListsViewController.swift in Sources */,
+				AE5E04F71F099FE5009F9F5A /* ProfileViewController.swift in Sources */,
+				AE5E04F51F099F07009F9F5A /* TopsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

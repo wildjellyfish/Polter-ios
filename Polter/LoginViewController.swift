@@ -29,6 +29,7 @@ class LoginViewController: UIViewController {
             displayAlertMessage(userMessage: "All fields are required")
             return
         }
+        self.dismiss(animated: true, completion: nil)
     }
     
     func displayAlertMessage(userMessage: String){
