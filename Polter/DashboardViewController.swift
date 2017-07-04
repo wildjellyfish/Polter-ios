@@ -22,6 +22,6 @@ class DashboardViewController: UITabBarController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        //self.performSegue(withIdentifier: "Login", sender: self)
+        self.performSegue(withIdentifier: "Login", sender: self)
     }
 }
