@@ -1,4 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+    <entity name="Bookmark" representedClassName="Bookmark" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="record_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Record" syncable="YES"/>
+        <relationship name="user_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Record" representedClassName="Record" syncable="YES" codeGenerationType="class">
+        <attribute name="audio_content_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="audio_file_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="audio_file_size" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="audio_update_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="enabled" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="geolocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="update_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="visits" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="user_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nickname" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="User" positionX="-270" positionY="-117" width="128" height="90"/>
+        <element name="Bookmark" positionX="-515" positionY="45" width="128" height="90"/>
+        <element name="Record" positionX="-36" positionY="9" width="128" height="210"/>
+    </elements>
 </model>

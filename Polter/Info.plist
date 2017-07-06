@@ -42,8 +42,9 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSAppTransportSecurity</key>
-	<dict/>
-	<key>Allow Arbitrary Loads</key>
-	<true/>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>
