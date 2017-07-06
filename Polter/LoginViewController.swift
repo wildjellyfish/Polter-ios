@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 		
 import UIKit
 
@@ -21,15 +22,25 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
     @IBAction func loginButtonTouchUpInside(_ sender: UIButton) {
-        let userName = usernameTextField.text
+        let username = usernameTextField.text
         let userPassword = passwordTextField.text
+        let root = "http://startup-rocket-kperezm.c9users.io/api/v1/"
+        let uri = "auth/sign_in"
+        let url = "\(root)\(uri)"
         
-        if(userName!.isEmpty || userPassword!.isEmpty)
+        if(username!.isEmpty || userPassword!.isEmpty)
         {
             displayAlertMessage(userMessage: "All fields are required")
             return
         }
-        self.dismiss(animated: true, completion: nil)
+        let requestParams = ["email": username,
+                             "password": userPassword]
+        
+        Alamofire.request(url, method: .post, parameters: requestParams, encoding: JSONEncoding.default, headers: [:])
+            .responseJSON { response in
+                debugPrint(response)
+                self.dismiss(animated: true, completion: nil)
+        }
     }
     
     func displayAlertMessage(userMessage: String){
